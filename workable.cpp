@@ -49,31 +49,31 @@ private:
 	int output_size_3;  // nmsed_classes
 
 	const std::array<std::string, num_classes> class_names = {
-		  "biker",
-	  	"car",
-	  	"pedestrian",
-	  	"trafficLight",
-	  	"trafficLight-Green",
-	  	"trafficLight-GreenLeft",
-	  	"trafficLight-Red",
-	  	"trafficLight-RedLeft",
-	  	"trafficLight-Yellow",
-	  	"trafficLight-YellowLeft",
-	  	"truck"
+			"biker",
+			"car",
+			"pedestrian",
+			"trafficLight",
+			"trafficLight-Green",
+			"trafficLight-GreenLeft",
+			"trafficLight-Red",
+			"trafficLight-RedLeft",
+			"trafficLight-Yellow",
+			"trafficLight-YellowLeft",
+			"truck"
 	};
 
 	const std::array<cv::Scalar, num_classes> class_colors = {
-	  	cv::Scalar(255, 0, 0), // red
-		  cv::Scalar(0, 255, 0), // lime
-		  cv::Scalar(255, 69, 0), // orange
-		  cv::Scalar(128, 0, 0), // maroon
-		  cv::Scalar(255, 215, 0), // gold
-		  cv::Scalar(255, 165, 0), // orange
-		  cv::Scalar(0, 255, 255), // aqua
-		  cv::Scalar(255, 255, 0), // yellow
-		  cv::Scalar(138, 43, 226), // blueviolet
-		  cv::Scalar(255, 127, 80), // coral
-		  cv::Scalar(0, 0, 255), // blue
+			cv::Scalar(255, 0, 0), // red
+			cv::Scalar(0, 255, 0), // lime
+			cv::Scalar(255, 69, 0), // orange
+			cv::Scalar(128, 0, 0), // maroon
+			cv::Scalar(255, 215, 0), // gold
+			cv::Scalar(255, 165, 0), // orange
+			cv::Scalar(0, 255, 255), // aqua
+			cv::Scalar(255, 255, 0), // yellow
+			cv::Scalar(138, 43, 226), // blueviolet
+			cv::Scalar(255, 127, 80), // coral
+			cv::Scalar(0, 0, 255), // blue
 	};
 
 	// structure of BoundingBoxes
@@ -172,7 +172,6 @@ public:
 	~TensorRTInference() {
 		engine_runtime->destroy();
 		engine_infer->destroy();
-		engine_context->destroy();
 	}
 
 	// initialization of model
